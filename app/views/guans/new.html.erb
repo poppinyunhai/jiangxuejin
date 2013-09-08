@@ -1,0 +1,12 @@
+<form action="/guans" method="POST">
+
+<% @fellowship.each do |h| %>
+                      <tr>
+                        <td><%= h.name %></td>
+                        <td><%= h.lei %></td>
+                        <td><%= h.num %></td>
+                        <td><%= check_box_tag "fellowship[]", h.id %></td>
+                      </tr>
+                    <% end %>
+<button type="submit" class="btn" >提交</button>
+</form>

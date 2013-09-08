@@ -1,0 +1,102 @@
+<div style="padding-left:30%; padding-top: 3%">
+  <h4>个人信息</h4>
+  姓名：<%= @shenqing.name %>
+  性别：<%= @shenqing.sex %>
+  生日：<%= @shenqing.bir %>
+  手机：<%= @shenqing.phone %>
+  固定电话：<%= @shenqing.tell %>
+  电子邮件：<%= @shenqing.email %>
+  <p></p>
+  教育背景
+  <p>
+    起始时间：<%= @shenqing.time %>
+    院校名称：<%= @shenqing.school %>
+    专业：<%= @shenqing.pro %>
+    学历：<%= @shenqing.record %>
+    学习形式：<%= @shenqing.learn %>
+  </p>
+
+  <p>
+    起始时间：<%= @shenqing.timea %>
+    院校名称：<%= @shenqing.schoola %>
+    专业：<%= @shenqing.proa %>
+    学历：<%= @shenqing.recorda %>
+    学习形式：<%= @shenqing.learna %>
+  </p>
+
+  <p>
+    起始时间：<%= @shenqing.timeb %>
+    院校名称：<%= @shenqing.schoolb %>
+    专业：<%= @shenqing.prob %>
+    学历：<%= @shenqing.recordb %>
+    学习形式：<%= @shenqing.learnb %>
+  </p>
+
+  <p>
+    起始时间：<%= @shenqing.timec %>
+    院校名称：<%= @shenqing.schoolc %>
+    专业：<%= @shenqing.proc %>
+    学历：<%= @shenqing.recordc %>
+    学习形式：<%= @shenqing.learnc %>
+  </p>
+  <p></p>
+  <h4>语言能力</h4>
+  <p>
+    语言/考试：<%= @shenqing.lang %>
+    能力：<%= @shenqing.ability %>
+    资格/证书：<%= @shenqing.cert %>
+    获得时间：<%= @shenqing.htime %>
+  </p>
+
+  <p>
+    语言/考试：<%= @shenqing.langa %>
+    能力：<%= @shenqing.abilitya %>
+    资格/证书：<%= @shenqing.certa %>
+    获得时间：<%= @shenqing.htimea %>
+  </p>
+
+  <p>
+    语言/考试：<%= @shenqing.langb %>
+    能力：<%= @shenqing.abilityb %>
+    资格/证书：<%= @shenqing.certb %>
+    获得时间：<%= @shenqing.htimeb %>
+  </p>
+  <h4>获奖情况</h4>
+  <p>
+    获奖时间:<%= @shenqing.jtime %>
+    比赛项目：<%= @shenqing.project %>
+    奖项：<%= @shenqing.award %>
+    备注：<%= @shenqing.remark %>
+  </p>
+  <p>
+    获奖时间:<%= @shenqing.jtimea %>
+    比赛项目：<%= @shenqing.projecta %>
+    奖项：<%= @shenqing.awarda %>
+    备注：<%= @shenqing.remarka %>
+  </p>
+  <p>
+    获奖时间:<%= @shenqing.jtimeb %>
+    比赛项目：<%= @shenqing.projectb %>
+    奖项：<%= @shenqing.awardb %>
+    备注：<%= @shenqing.remarkb %>
+  </p>
+  <p></p>
+  <h4>特长</h4>
+  <p></p>
+  <%= @shenqing.adept %>
+  <p></p>
+  <h4>爱好</h4>
+  <p></p>
+  <%= @shenqing.hobby %>
+  <p></p>
+  <h4>申请奖学金明细</h4>
+  <% @guan = Guan.where(:shenqing_id => @shenqing.id).all%>
+  <% @guan.each do |g| %>
+    <p>
+      学校名称：<%= Fellowship.find(g.fellowship_id).name%>
+      奖学金类型：<%= Fellowship.find(g.fellowship_id).lei%>
+      奖学金额度： <%= Fellowship.find(g.fellowship_id).num%>
+    </p>
+  <% end %>
+  <%= link_to "返回列表", admin_shenqings_path%>
+</div>

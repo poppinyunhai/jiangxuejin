@@ -1,0 +1,139 @@
+<style type="text/css">
+
+* {font-size:12px;font-family:Verdana,Tahoma;padding:0;margin:0;}
+
+
+a {color: #339933; text-decoration: none; }
+
+a:hover {color: #F60; }
+
+#andyscroll {overflow: hidden;height:380px;background: #F9F9F9;border: 1px solid #E0E0E0;width:98%;}
+
+#scrollmessage ul {list-style:none; padding:0; margin:0;}
+
+#scrollmessage li {line-height: 18px;}
+
+</style>
+<div style="padding-bottom:1%">
+    <strong style="padding-left:1%">学校名称</strong>
+    <strong style="padding-left:22%">奖学金类型</strong>
+    <strong style="padding-left:26%">奖学金额度</strong>
+</div>
+<div id="andyscroll">
+    
+    <div id="scrollmessage">
+        <table class="table table-bordered">
+            <tbody>
+                <% @fellowship.each do |h| %>
+              <tr>
+                <td><%= h.name %></td>
+                <td><%= h.lei %></td>
+                <td><%= h.num %></td>
+              </tr>
+                <% end %>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+<!--
+
+try{
+
+    var stopscroll        = false;
+
+    
+
+    var scrollElem = document.getElementById("andyscroll");
+
+    with(scrollElem){
+
+    style.overflow    = 'hidden';
+
+    noWrap            = true;
+
+    }
+
+    
+
+    scrollElem.onmouseover = new Function('stopscroll = true');
+
+    scrollElem.onmouseout    = new Function('stopscroll = false');
+
+    
+
+    var preTop        = 0;
+
+    var currentTop = 0;
+
+    var stoptime    = 0;
+
+    
+
+    var leftElem = document.getElementById("scrollmessage");
+
+    
+
+    scrollElem.appendChild(leftElem.cloneNode(true));
+
+        
+
+    init_srolltext();
+
+    
+
+}catch(e){}
+
+    
+
+function init_srolltext(){
+
+    scrollElem.scrollTop = 0;
+
+    setInterval('scrollUp()', 40);
+
+}
+
+function scrollUp(){
+
+    if(stopscroll) return;
+
+    currentTop += 0;
+
+    if(currentTop == 19) {
+
+    stoptime += 0;
+
+    currentTop -= 1;
+
+    if(stoptime == 0) {
+
+        currentTop = 0;
+
+        stoptime = 0;
+
+    }
+
+    }else{
+
+    preTop = scrollElem.scrollTop;
+
+    scrollElem.scrollTop += 1;
+
+    if(preTop == scrollElem.scrollTop){
+
+        scrollElem.scrollTop = 0;
+
+        scrollElem.scrollTop += 1;
+
+    }
+
+    }
+
+}
+
+
+</script>

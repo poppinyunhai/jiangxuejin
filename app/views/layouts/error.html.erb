@@ -1,0 +1,16 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <p class="text-error">您填写的信息有误，请重新填写</p>
+       <%= link_to "重新填写", new_meng_path %>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>

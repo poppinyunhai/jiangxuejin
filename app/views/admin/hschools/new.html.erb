@@ -1,0 +1,37 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>添加学校信息</h4>
+      <div>
+        <%= form_for [:admin, @hschool] do |f| %>
+          <%= f.label :ranking, "排名" %>
+          <%= f.text_field :ranking %>
+          <%= f.label :lei, "类型"%>
+          <%= f.text_field :lei %>
+          <%= f.label :place, "位置" %>
+          <%= f.text_field :place %>
+          <%= f.label :religion, "宗教" %>
+          <%= f.text_field :religion %>
+          <%= f.label :scale, "规模" %>
+          <select id="hschool_scale" name="hschool[scale]" >
+            <option value ="500以下">500以下</option>
+            <option value ="500-1000">500-1000</option>
+            <option value ="1000-2000">1000-2000</option>
+            <option value ="2000-3000">2000-3000</option>
+            <option value ="3000-4000">3000-4000</option>
+            <option value ="4000以上">4000以上</option>
+          </select>
+          <%= f.label :result, "成绩" %>
+          <%= f.text_field :result %>
+          <p></p>
+          <%= f.submit "保存"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

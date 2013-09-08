@@ -1,0 +1,38 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <table class="table table-bordered">
+          <thead>
+                <tr>
+                  <th>名称</th>
+                  <th>地址</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @lian.each do |s| %>
+                <tr>
+                  <td><%= s.name %></td>
+                  <td><%= s.addr%></td>
+                  <td>
+                    <%= link_to "更新", edit_admin_lian_path(s) %>
+                    <%= link_to "删除", admin_lian_path(s), :method => :delete %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>
+
+
+
+

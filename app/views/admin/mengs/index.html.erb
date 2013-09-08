@@ -1,0 +1,48 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>姓名</th>
+              <th>电话</th>
+              <th>QQ</th>
+              <th>邮箱</th>
+              <th>就职公司</th>
+              <th>职位</th>
+              <th>加入理由</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @meng.each do |m| %>
+              <tr>
+                <td><%= m.name %></td>
+                <td><%= m.phone %></td>
+                <td><%= m.qq %></td>
+                <td><%= m.email %></td>
+                <td><%= m.company %></td>
+                <td><%= m.zhi %></td>
+                <td><%= m.li %></td>
+                <td>
+                  <%= link_to "删除", admin_meng_path(m), :method => :delete %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,44 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>学校名称</th>
+              <th>奖学金类型</th>
+              <th>奖学金额度</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @fellowship.each do |h| %>
+              <tr>
+                <td><%= h.name %></td>
+                <td><%= h.lei %></td>
+                <td><%= h.num %></td>
+                <td>
+                  <%= link_to "删除", admin_fellowship_path(h), :method => :delete %>
+                  <%= link_to '更新', :controller => 'admin/fellowships', :action => 'edit', :id => h %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="text-center">
+          <%= paginate @fellowship %>
+        </div>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>
+
+
+
+

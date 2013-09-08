@@ -1,0 +1,35 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <table class="table table-bordered">
+          <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @shenqing.each do |s| %>
+                <tr>
+                  <td><%= s.name %></td>
+                  <td><%= link_to "查看", admin_shenqing_path(s) %></td>
+                  <td><%= link_to "删除", admin_shenqing_path(s), :method => :delete %></td>
+                </tr>
+                <% end %>
+              </tbody>
+        </table>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>
+
+
+
+

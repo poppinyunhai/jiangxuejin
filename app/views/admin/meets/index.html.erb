@@ -1,0 +1,23 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <% num = 0 %>
+        <% @meet.each do |m| %>
+        <% num=num+1%>
+        <p></p>
+        <p>
+          更新大图编号：<%= num %>
+          <%= link_to "更新", edit_admin_meet_path(m), class: "btn btn-primary"%>
+        </p>
+        <% end %>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>

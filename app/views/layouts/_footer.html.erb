@@ -1,0 +1,13 @@
+    <div class="container">
+    
+      <div class="row">
+        <h2>友情链接</h1>
+        <% @lian = Lian.all %>
+        <% @lian.each do |l| %>
+        <div class="grid-2">
+          <p><%= link_to "友情链接", l.addr %></p>
+        </div> <!-- /grid-4 -->
+         <% end %>
+      </div> <!-- /row -->
+      
+    </div> <!-- /container -->

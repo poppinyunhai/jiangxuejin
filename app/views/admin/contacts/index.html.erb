@@ -1,0 +1,19 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <div style="padding-top:4%">
+        <%=raw @contact.content %>
+        <p></p>
+        <p>
+          <%= link_to '更新', edit_admin_contact_path(@contact), class: "btn btn-primary"%>
+        </p>
+      </div>
+      <!--end-->
+    </div>
+  </div>
+</div>

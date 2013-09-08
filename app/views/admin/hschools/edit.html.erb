@@ -1,0 +1,25 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>更新学校信息</h4>
+      <div>
+        <%= simple_form_for [:admin, @hschool],:url => { :controller => '/admin/hschools', :action => 'update', :id => @hschool },:html => { :multipart => true } do |f| %>
+          <%= f.input :ranking, label:"排名" %>
+          <%= f.input :lei, label:"类型" %>
+          <%= f.input :place, label:"位置" %>
+          <%= f.input :religion, label:"宗教" %>
+          <%= f.input :scale, label:"规模" %>
+          <%= f.input :result, label:"成绩" %>
+          <p></p>
+          <%= f.button :submit, "保存", class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

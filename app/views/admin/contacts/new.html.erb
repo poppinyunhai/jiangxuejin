@@ -1,0 +1,19 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>发表联系我们</h4>
+      <div>
+        <%= simple_form_for [:admin, @contact] do |m| %>
+          <%= m.kindeditor :content %>
+          <p></p>
+          <%= m.button :submit, "保存", class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

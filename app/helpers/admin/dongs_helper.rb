@@ -1,0 +1,2 @@
+module Admin::DongsHelper
+end

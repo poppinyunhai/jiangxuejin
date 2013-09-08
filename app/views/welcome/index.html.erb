@@ -1,0 +1,201 @@
+<div id="wrapper" class="clearfix">
+  
+  <div id="header">
+    
+    <div class="container">
+      
+      <h2>
+        <!--<%= link_to "Focus Business", root_path%> -->
+        美国高中奖学金联盟
+        <small style="padding-left:40%">联系电话：400-6066-860</small>
+      </h2>
+      
+    </div> <!-- /container -->
+    
+  </div> <!-- /header --> 
+  
+  
+  <div id="nav" class="clearfix">
+    
+    <div class="container">
+    
+      <ul id="main-nav">
+        <li class="active">
+          <%= link_to "最新活动", dongs_path%>
+        <li>
+          <%= link_to "奖学金申请", fellowships_path%>
+        </li>
+        
+        <li>
+          <%= link_to "美国高中联盟", hschools_path%>
+        </li>
+        
+        <li>
+          <%= link_to "家长联盟", new_meng_path%>
+        </li>       
+        
+      </ul>
+      
+    </div> <!-- /container -->
+    
+  </div> <!-- /nav -->
+  
+  
+  <div id="masthead">
+    
+    <div class="container">
+    
+      <div id="masthead-carousel" class="carousel slide">
+        
+        <div class="carousel-inner">
+          <div class="active item">
+            <%= image_tag @meet.avatar.url %>
+            <div class="masthead-details">
+              <%=raw @meet.content %>
+            </div> <!-- /masthead-details -->
+          </div> <!-- /item -->
+          <div class="item">
+            <%= image_tag Meet.find(@meet.id + 1).avatar.url %>
+            <div class="masthead-details">
+              <%=raw Meet.find(@meet.id + 1).content %>
+            </div> <!-- /masthead-details -->
+          </div> <!-- /item -->
+          
+          <div class="item">
+            <%= image_tag @meet.avatar.url %>
+            <div class="masthead-details">
+              <%=raw @meet.content %>
+            </div> <!-- /masthead-details -->
+          </div> <!-- /item -->
+          <div class="item">
+            <%= image_tag Meet.find(@meet.id + 2).avatar.url %>
+            <div class="masthead-details">
+              <%=raw Meet.find(@meet.id + 2).content %>
+            </div> <!-- /masthead-details -->
+          </div> <!-- /item -->
+        </div> <!-- /carousel-inner -->
+        
+        <a class="carousel-control left" href="#masthead-carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#masthead-carousel" data-slide="next">&rsaquo;</a>
+        
+      </div> <!-- /masthead-carousel -->
+      
+    </div> <!-- /container -->
+  
+  </div> <!-- /masthead -->
+  
+  
+  
+  
+  <div id="content">
+    
+    <div class="container">
+    
+      <div class="row">
+        <div id="welcome" class="grid-12">
+
+      </div> <!-- /row -->
+      
+      
+      <hr class="row-divider" />
+      <!--22222-->
+      <div class="row">
+        
+        <div class="grid-8">
+          <%= render "table"%>
+          <p></p>
+          <p style="text-align: center;">
+            <%= link_to "申请奖学金", fellowships_path, class: "btn btn-warning btn-large" %>
+          </p>
+        </div>
+        <div class="grid-4">
+          <div class=" service-container">
+            <!--内容-->
+            <%= search_form_for @q do |f| %>
+              <%= f.label :ranking_cont, "学校排名" %>
+              <%= f.text_field :ranking_cont %>
+              <%= f.label :lei_cont, "学校类型" %>
+              <%= f.text_field :lei_cont %>
+              <%= f.label :place_cont, "地理位置" %>
+              <%= f.text_field :place_cont %>
+              <%= f.label :religion_cont, "宗教背景" %>
+              <%= f.text_field :religion_cont %>
+              <%= f.label :scale_cont, "学校规模" %>
+              <select id="hschool_scale" name="hschool[scale]" >
+                <option value ="500以下">500以下</option>
+                <option value ="500-1000">500-1000</option>
+                <option value ="1000-2000">1000-2000</option>
+                <option value ="2000-3000">2000-3000</option>
+                <option value ="3000-4000">3000-4000</option>
+                <option value ="4000以上">4000以上</option>
+              </select>
+
+              <%= f.label :result_cont, "TOEFL成绩" %>
+              <%= f.text_field :result_cont %>
+              <p>
+                <%= f.submit "搜索", class: "btn btn-warning" %>
+              </p>
+            <% end %>
+          </div> <!-- /row -->
+        </div>
+      </div> <!-- /grid-4 -->
+      <!--ssssssssssssssssssss-->
+     
+    </div> <!-- /container -->
+  </div> <!-- /content -->
+  
+  
+  <div id="footer">
+    
+    <%= render "layouts/footer"%>
+    
+  </div> <!-- /footer -->
+  
+  
+  
+  <div id="copyright">
+    
+    <div class="container">
+      
+      <div class="row">
+      
+        <div id="rights" class="grid-6">
+        © 2012 Propel UI. All Rights Reserved.
+        </div> <!-- /grid-6 -->
+        
+        <div id="totop" class="grid-2">
+          <%= link_to "关于我们", abouts_path %>
+        </div> <!-- /grid-6 -->
+        <div id="totop" class="grid-2">
+          <%= link_to "联系我们", contacts_path %>
+        </div> <!-- /grid-6 -->
+        <div id="totop" class="grid-2">
+          <%= link_to "加入我们", joins_path %>
+        </div> <!-- /grid-6 -->
+        
+      </div> <!-- /row -->
+      
+    </div> <!-- /container -->
+      
+  </div> <!-- /copyright -->
+  
+</div> <!-- /wrapper -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/focus.js"></script>
+
+<script>
+
+$(function () {
+  
+  $('#masthead-carousel').carousel ('cycle');
+  
+});
+
+</script>
+

@@ -1,0 +1,193 @@
+<form action="/shenqings" method="POST">
+<!--  <input type="hidden" name="long" value=<%= @shen.join(',') %> /> 
+ -->  <table >
+          <tbody>
+            <tr><td>个人信息</td></tr>
+              <tr>
+                <td>
+                  <input type="text" class="input-small" placeholder="姓名" id="shenqing_name" name="shenqing[name]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="性别" id="shenqing_sex" name="shenqing[sex]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="生日" id="shenqing_bir" name="shenqing[bir]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="手机" id="shenqing_phone" name="shenqing[phone]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="固定电话" id="shenqing_tell" name="shenqing[tell]">
+                </td>
+              </tr>
+                <!--end申请人信息-->
+                <!--教育背景-->
+            <tr><td>教育背景</td></tr>
+              <tr>
+                <td>
+                  <input type="text" class="input-small" placeholder="起始时间" id="shenqing_time" name="shenqing[time]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="院校名称" id="shenqing_school" name="shenqing[school]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="专业"  id="shenqing_pro" name="shenqing[pro]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学历" id="shenqing_record" name="shenqing[record]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学习形式" id="shenqing_learn" name="shenqing[learn]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="input-small" placeholder="起始时间" id="shenqing_timea" name="shenqing[timea]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="院校名称" id="shenqing_schoola" name="shenqing[schoola]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="专业"  id="shenqing_proa" name="shenqing[proa]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学历" id="shenqing_recorda" name="shenqing[recorda]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学习形式" id="shenqing_learna" name="shenqing[learna]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="input-small" placeholder="起始时间" id="shenqing_timeb" name="shenqing[timeb]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="院校名称" id="shenqing_schoolb" name="shenqing[schoolb]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="专业"  id="shenqing_prob" name="shenqing[prob]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学历" id="shenqing_recordb" name="shenqing[recordb]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学习形式" id="shenqing_learnb" name="shenqing[learnb]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="input-small" placeholder="起始时间" id="shenqing_timec" name="shenqing[timec]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="院校名称" id="shenqing_schoolc" name="shenqing[schoolc]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="专业"  id="shenqing_proc" name="shenqing[proc]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学历" id="shenqing_recordc" name="shenqing[recordc]">
+                </td>
+                <td>
+                  <input type="text" class="input-small" placeholder="学习形式" id="shenqing_learnc" name="shenqing[learnc]">
+                </td>
+              </tr>
+              <tr><td>语言能力</td></tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="语言/考试" id="shenqing_lang" name="shenqing[lang]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="能力" id="shenqing_ability" name="shenqing[ability]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="资格/证书" id="shenqing_cert" name="shenqing[cert]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="获得时间" id="shenqing_htime" name="shenqing[htime]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="语言/考试" id="shenqing_langa" name="shenqing[langa]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="能力" id="shenqing_abilitya" name="shenqing[abilitya]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="资格/证书" id="shenqing_certa" name="shenqing[certa]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="获得时间" id="shenqing_htimea" name="shenqing[htimea]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="语言/考试" id="shenqing_langb" name="shenqing[langb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="能力" id="shenqing_abilityb" name="shenqing[abilityb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="资格/证书" id="shenqing_certb" name="shenqing[certb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="获得时间" id="shenqing_htimeb" name="shenqing[htimeb]">
+                </td>
+              </tr>
+             
+              <tr><td>获奖情况</td></tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="获奖时间" id="shenqing_jtime" name="shenqing[jtime]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="比赛项目" id="shenqing_project" name="shenqing[project]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="奖项" id="shenqing_award" name="shenqing[award]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="备注" id="shenqing_remark" name="shenqing[remark]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="获奖时间" id="shenqing_jtimea" name="shenqing[jtimea]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="比赛项目" id="shenqing_projecta" name="shenqing[projecta]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="奖项" id="shenqing_awarda" name="shenqing[awarda]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="备注" id="shenqing_remarka" name="shenqing[remarka]">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="text" class="input-small" placeholder="获奖时间" id="shenqing_jtimeb" name="shenqing[jtimeb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="比赛项目" id="shenqing_projectb" name="shenqing[projectb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="奖项" id="shenqing_awardb" name="shenqing[awardb]">
+                </td>
+                <td>
+                    <input type="text" class="input-small" placeholder="备注" id="shenqing_remarkb" name="shenqing[remarkb]">
+                </td>
+              </tr>
+            
+
+
+          </tbody>
+        </table>
+        <p style="padding-left:3px">专长及兴趣</p> 
+        <textarea rows="4" style="width:660px" id="shenqing_adept" name="shenqing[adept]">
+        </textarea>
+        <input type="hidden" id="aa" name="fellowship" value="<%= @newshen %>">
+        <p></p>
+  <button type="submit" class="btn" >提交</button>
+</form>
+

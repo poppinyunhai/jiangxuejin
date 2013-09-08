@@ -1,0 +1,23 @@
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>学校名称</th>
+        <th>奖学金类型</th>
+        <th>奖学金额度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @fellowship.each do |h| %>
+        <tr>
+          <td><%= h.name %></td>
+          <td><%= h.lei %></td>
+          <td><%= h.num %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div style="text-align: center;">
+    <%= paginate @fellowship %>
+  </div>
+</div>

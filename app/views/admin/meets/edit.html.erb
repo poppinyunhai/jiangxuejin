@@ -1,0 +1,22 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <%= image_tag @meet.avatar.url %>
+      <h4>更新活动信息</h4>
+      <div>
+        <%= form_for [:admin, @meet],:url => { :controller => '/admin/meets', :action => 'update', :id => @meet },:html => { :multipart => true } do |f| %>
+          <%= f.kindeditor :content%>
+          <%= f.file_field :avatar %>  
+          <%= f.submit "更新", class: "btn btn-primary"%>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+

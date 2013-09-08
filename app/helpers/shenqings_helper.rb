@@ -1,0 +1,2 @@
+module ShenqingsHelper
+end

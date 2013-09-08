@@ -1,0 +1,21 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>添加奖学金信息</h4>
+      <div>
+        <%= simple_form_for [:admin, @fellowship] do |f| %>
+          <%= f.input :name, label:"学校名称" %>
+          <%= f.input :lei, label:"奖学金类型" %>
+          <%= f.input :num, label:"奖学金额度" %>
+          <p></p>
+          <%= f.button :submit, "保存", class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

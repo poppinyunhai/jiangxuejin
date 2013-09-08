@@ -1,0 +1,24 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>更新友情链接</h4>
+      <div>
+        <%= form_for [:admin, @lian],:url => { :controller => '/admin/lians', :action => 'update', :id => @lian },:html => { :multipart => true } do |f| %>
+          <%= f.label :name, "名称"%>
+          <%= f.text_field :name%>
+          <%= f.label :addr, "地址"%>
+          <%= f.text_field :addr%>
+
+          <%= f.submit "更新", class: "btn btn-primary"%>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+

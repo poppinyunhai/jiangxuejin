@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shenqing_id: 1
+  fellowship: 1
+
+two:
+  shenqing_id: 1
+  fellowship: 1

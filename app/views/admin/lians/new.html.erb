@@ -1,0 +1,22 @@
+<%= render "layouts/title"%>
+<div class="container-fluid" style="padding-top:1%">
+  <div class="row-fluid">
+    <div class="span2" style="padding-top:2%">
+      <!--Sidebar content-->
+      <%= render "layouts/left"%>
+    </div>
+    <div class="span6">
+      <h4>发表最新活动详情</h4>
+      <div>
+        <%= form_for [:admin, @lian], :html => { :multipart => true } do |m| %>
+          <%= m.label :name, "名称" %>
+          <%= m.text_field :name %>
+          <%= m.label :addr, "地址"%>
+          <%= m.text_field :addr %>
+          <p></p>
+          <%= m.submit "保存", class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

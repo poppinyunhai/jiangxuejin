@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ranking: 1
+  type: 
+  place: MyString
+  religion: MyString
+  scale: MyString
+  result: 1
+
+two:
+  ranking: 1
+  type: 
+  place: MyString
+  religion: MyString
+  scale: MyString
+  result: 1
