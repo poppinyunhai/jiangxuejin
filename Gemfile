@@ -24,6 +24,6 @@ gem 'devise'
 gem 'rails_kindeditor'
 gem 'simple_form'
 gem "ransack"
-gem 'debugger'
+#gem 'debugger'
 gem 'mysql2'
 gem 'unicorn'
